@@ -10,7 +10,7 @@ class ZeroEngine;
 
 //所有可注册事件类的基类
 class EventDispatcher
-	:public std::enable_shared_from_this<EventDispatcher>
+	: virtual public std::enable_shared_from_this<EventDispatcher>
 {
 public:
 	explicit EventDispatcher(weak_ptr<ZeroEngine> core_engine);
